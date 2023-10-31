@@ -1,0 +1,122 @@
+{%extends 'base.html' %}
+
+
+{%block banner%}
+    <!-- TOP BANNER -->
+    <div class="top-banner">
+        
+        <div class="container">
+            <div class="small-bold-text banner-text">🏎️ Stay alert for the safety of your own as well as other’s. →</div>
+        </div>
+    </div>
+{% endblock banner%}
+
+{%block bodycontent%}
+    <!-- HEADER -->
+    <header>
+        <div class="container header-section flex">
+            <div class="header-left">
+                <h1>Drive hastle-free.</h1>
+                <p>RoadHawk is a device that alerts a driver to reduce their speed and be alert whenever it detects a pothole/obstacle on the path.</p>
+                <a href="#" class="primary-button get-started-button">Get started</a>
+            </div>
+            <div class="header-right">
+                <img src="/static/images/drive.png" alt="hero image">
+            </div>
+        </div>
+    </header>
+<!-- COMPANIES -->
+    <section class="company-section">
+        <div class="container">
+            <div class="small-bold-text companies-header">
+                <div class="con">
+                Join us in our goal of securing a more promising future through responsible and safe driving.
+            </div>
+                <br>
+                <!-- <div class="logos flex">
+                    <img class="logo" src="/static/images/asset 3.png" alt="">
+                    <img class="logo" src="/static/images/asset 4.png" alt="">
+                    <img class="logo" src="/static/images/asset 5.png" alt="">
+                    <img class="logo" src="/static/images/asset 6.png" alt="">
+                    <img class="logo" src="/static/images/asset 7.png" alt="">
+                    <img class="logo" src="/static/images/asset 8.svg" alt="">
+                    <img class="logo" src="/static/images/asset 9.png" alt="">
+                </div> -->
+            </div>
+        </div>
+    </section>
+<!-- FEATUREs÷ -->
+    <section class="big-feature-section">
+        <div class="container flex big-feature-container">
+            <div class="feature-image">
+                <img src="/static/images/alert.png" alt="">
+            </div>
+            <div class="feature-description flex">
+                <h4>Keeps drivers alert with</h4>
+                <h3>Instant Notifications 🔔</h3>
+                <p>Pings the driver as soon as obstacle/pothole is detected and alerts them.</p>
+            </div>
+        </div>
+    </section>
+    <section class="big-feature-section">
+        <div class="container flex big-feature-container" style="flex-direction: row-reverse;">
+            <div class="feature-image">
+                <img src="/static/images/gov.avif" alt="" style="width: 600px">
+            </div>
+            <div class="feature-description flex">
+                <h4>Location stored in</h4>
+                <h3>Government database</h3>
+                <p>notifies respective departments about location of every new pothole detected so that they can take further action.</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="big-feature-section">
+        <div class="container flex big-feature-container">
+            <div class="feature-image" style="padding: 0 70px">
+                <img src="/static/images/rasp-pi.png" alt="" style="width: 550px">
+            </div>
+            <div class="feature-description flex">
+                <h4>Uses the very efficient</h4>
+                <h3>Raspberry pi</h3>
+                <p>along with several sensors to accurately detect obstacles.</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- examples-section -->
+    <section class="examples-section">
+        <div class="container">
+            <div class="examples-header flex" >
+                <h2 style="padding: 20px">One platform, endless possibilities</h2>
+                <!-- <a href="#" class="secondary-button">See all examples <i class="fa-solid fa-right-long"></i></a> -->
+            </div>
+            <div class="example-area flex">
+                <a href="#" class="example-card">
+                    <h3 class="card-text">Use of mordern technologies to improve safety.</h3>
+                </a>
+                <a href="#" class="example-card" style="background-image: linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.8)), url(/static/images/imr3.jpeg); background-size:cover">
+                    <h3 class="card-text">Road accident data over recent years.</h3>
+                </a>
+                <a href="#" class="example-card">
+                    <h3 class="card-text">Standardized safety features by government.</h3>
+                </a>
+                <a href="#" class="example-card">
+                    <h3 class="card-text">Adding ease to driving experience.</h3>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container flex cta-section-container">
+            <h2>Start testing today</h2>
+            <p>Make driving simple for you and your car.</p>
+            <a href="#" class="primary-button">Get started</a>
+        </div>
+    </section>
+{%endblock bodycontent%}

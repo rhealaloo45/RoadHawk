@@ -1,0 +1,42 @@
+{%extends 'home/baseAuth.html' %}
+
+{%block cssfile1%}<link rel="stylesheet" href="/static/css/home/login.css">{%endblock cssfile1%}
+{%block bodylog%}
+<br>
+<br>
+<br>
+<br>
+<div class="container1" id="container1">
+    <div class="form-container log-in-container">
+        <form method="post" action="/signin" class="mb-2">
+            {% csrf_token %}
+            
+            <h3>Login</h3>
+            
+            <div class="form-group box">
+                <label for="username">Username</label>
+                {% csrf_token %}
+                <input type="text" class="form-control mx-0 " id="username" name="username" placeholder="Enter Your Username" Required>
+            </div>
+            <div class="form-group box">
+                <label for="pass1">Password</label>
+                {% csrf_token %}
+                <input type="password" class="form-control mx-0 " id="pass1" name="pass1" placeholder="Enter Your Password" Required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary my-2">Log In</button>{% csrf_token %}
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            
+        </div>
+    </div>
+</div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <script src="" async defer></script>
+
+{% endblock bodylog %}
