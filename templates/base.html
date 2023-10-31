@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoadHawk</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+{%block banner%}{% endblock banner%}
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="container main-nav flex">
+            <a class="company-logo">
+                <h2><span class="logo-color">R</span>oad<span class="logo-color">H</span>awk</h2>
+            </a>
+            <div class="nav-links ">
+                <ul class="flex">
+                    <li><a href="#" class="hover-link">Product</a></li>
+                    <li><a href="#" class="hover-link">Customers</a></li>
+                    <!-- <li><a href="#" class="hover-link">Pricing</a></li> -->
+                    <li><a href="#" class="hover-link">Features</a></li>
+                    <li><a href="/signin" class="hover-link secondary-button">Sign In</a></li>
+                    <li><a  href="/signup" class="hover-link primary-button">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% if messages %}
+{% for message in messages %}
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
+        <strong>{{ message }}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endfor %}
+      {% endif %} 
+
+
+    {%block bodycontent%}{%endblock bodycontent%}
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container flex footer-container">
+            <a href="" class="company-logo">
+                
+                <h2><span class="logo-color">R</span>oad<span class="logo-color">H</span>awk</h2>
+                <img src="/static/images/main1.png" alt="company-logo" style="width: 400px;">
+            </a>
+            <div class="link-column flex">
+                <h4>Product</h4>
+                <a href="#" class="hover-link">Overview</a>
+                <a href="#" class="hover-link">Pricing</a>
+                <a href="#" class="hover-link">Usability Hub</a>
+                <a href="#" class="hover-link">Customers page</a>
+                <a href="#" class="hover-link">Status page</a>
+            </div>
+            <div class="link-column flex">
+                <h4>Methodology</h4>
+                <a href="#" class="hover-link">Overview</a>
+                <a href="#" class="hover-link">Pricing</a>
+                <a href="#" class="hover-link">Usability Hub</a>
+                <a href="#" class="hover-link">Customers page</a>
+                <a href="#" class="hover-link">Status page</a>
+            </div>
+            <div class="link-column flex">
+                <h4>Resources</h4>
+                <a href="#" class="hover-link">Overview</a>
+                <a href="#" class="hover-link">Pricing</a>
+                <a href="#" class="hover-link">Usability Hub</a>
+                <a href="#" class="hover-link">Customers page</a>
+                <a href="#" class="hover-link">Status page</a>
+            </div>
+        </div>
+    </footer>
+<div class="subfooter">
+    <div class="sub-footer-container flex">
+        <a href="#" class="hover-link">Privacy policy</a>
+        <a href="#" class="hover-link">Terms and conditions</a>
+        <a href="#" class="hover-link">Security Information</a>
+        <a href="#" class="hover-link"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="hover-link"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+</div>
+</body> 
+    <!-- <div class="spacer" style="height:300px"></div> -->
+    <script src="https://kit.fontawesome.com/7aa4d20b7d.js" crossorigin="anonymous"></script>
+</html>
