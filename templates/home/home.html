@@ -12,25 +12,26 @@
 
 {%block bodycontent%}
 <div class="h">
-    <h2 style="align-items:center;">Stored locations</h2>
+    
     </div>
     <div class="album py-5 bg-light">
+      <h2 style="align-items:center; padding: 0 70px">Stored locations</h2>
         <div class="container">
           
     
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
 
             {% for pothole in data %}
 <div class="col">
-    <div class="card shadow-sm">
-        <img src="/static/images/map.jpg" style="height:300px">
+    <div class="card shadow-sm h-100">
+        <img src="/static/images/map.png" style="width:100%">
         <div class="card-body">
             <h5 class="card-title">Pothole Detected</h5>
             <p>Ultra: {{ pothole.ultra }}</p>
             <p>Gyro X: {{ pothole.gyro_x }}</p>
             <p>Gyro Y: {{ pothole.gyro_y }}</p>
             <p>Gyro Z: {{ pothole.gyro_z }}</p>
-            <p>Location: {{ pothole.gps_lat }} N {{ pothole.gps_long }} E</p>
+            <p>Location: <a href="https://www.google.com/maps?q={{ pothole.gps_lat }},{{ pothole.gps_long }}" target="_blank">{{ pothole.gps_lat }} N {{ pothole.gps_long }} E</a></p>
             {% comment %} <p>GPS Date: {{ pothole.gps_date }}</p> {% endcomment %}
             <div class="d-flex justify-content-between align-items-center">
                 <!-- Additional buttons or content can be added here -->
