@@ -100,7 +100,7 @@ def signup(request):
 def signout(request):
     logout(request)
     messages.success(request, "Logged Out Successfully!!")
-    return redirect('signin')
+    return redirect('app1')
 
 
 @login_required(login_url='signin')
