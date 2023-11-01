@@ -7,10 +7,35 @@ from django.contrib.auth.models import User
 from project1 import settings
 from django.shortcuts import render, HttpResponse,redirect
 from datetime import datetime
+import json
+from .models import potData
 
 
 # Create your views here.
 def index(request):
+    if request.method == "POST":
+        # data = request.POST
+        # data.dict()
+        # data.keys()
+        # data2 = list(data.keys())
+        # res = json.loads(data2)
+        data = json.loads(request.body.decode('utf-8'))
+        
+        ultra = data.get('ultra')
+        gyro_x = data.get('gyro_x')
+        gyro_y = data.get('gyro_y')
+        gyro_z = data.get('gyro_z')
+        # gps_date = datetime.today()
+        gps_lat = data.get('gps_lat')
+        gps_long = data.get('gps_long')
+        
+        pothole = potData(ultra=ultra, gyro_x=gyro_x, gyro_y=gyro_y, gyro_z=gyro_z, gps_lat=gps_lat, gps_long=gps_long)
+        pothole.save()
+        
+        # data = json.loads(request.body.decode('utf-8'))
+        
+        # print("data stored on " + gps_date)
+        
     return render(request, 'index.html')
 
 
@@ -27,7 +52,7 @@ def signin(request):
             fname = user.first_name
             # messages.success(request, "Logged In Sucessfully!!")
             # user.is_active()
-            return render(request, "home/home.html",{"fname":fname})
+            return redirect('home')
         else:
             messages.error(request, "Bad Credentials!!")
             return redirect('home')
@@ -77,9 +102,9 @@ def signout(request):
     messages.success(request, "Logged Out Successfully!!")
     return redirect('signin')
 
+
 @login_required(login_url='signin')
 def home(request):
-    # login(request)
-    # fname = user.first_name
-    # fname=fname
-    return render(request, 'home/home.html')
+    data = potData.objects.all()
+    print(data)
+    return render(request, 'home/home.html', {'data': data})
